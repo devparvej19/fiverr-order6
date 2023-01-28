@@ -174,11 +174,10 @@ button:focus {
 }
 
 
-
 /*=======================
      banner style  
 =========================*/
-.banner {
+.custom-container {
     padding: 20px 20px 20px 20px;
 }
 
@@ -234,4 +233,106 @@ button:focus {
     to {
         transform: rotate(360deg);
     }
+}
+/*=======================
+     Commited style  
+=========================*/
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+.read-more .aria {
+    display: none;
+}
+.read-more .button {
+    align-items: center;
+    display: flex;
+}
+.read-more .circle {
+    display: block;
+    height: 6rem;
+    margin-right: 2rem;
+    position: relative;
+    width: 6rem;
+}
+.read-more .icon-circles {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.read-more .icon {
+    transition: transform .5s ease-out;
+}
+.commited-title{
+    font-size: 3rem;
+}
+.commited-description p{
+    width: 100%;
+    font-size: 1.4rem;
+        line-height: 1.4;
+        padding: 4rem 0;
+}
+.hover-roteted .read-more{
+        transition: transform .5s ease-out;
+}
+.hover-roteted:hover .read-more{
+    transform: rotate(90deg);
+}
+.line {
+    background: #979797;
+    height: 2px;
+    width: 25.55vw;
+    border: none;
+    margin: 0 6rem ;
+}
+.section-title{
+    font-size: 2rem;
+}
+/*=======================
+     project style  
+=========================*/
+
+.project{
+    position: relative;
+}
+
+
+.project a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: #000;
+  overflow: hidden;
+  transition: ease .5s all;
+  display: block;
+  z-index: 2;
+  text-shadow: 3px 5px 10px rgba(255,255,255,1);
+  
+}
+.project:hover h1{
+    color: #000 !important;
+}
+.project a:hover h1 {
+  transition: ease .5s all;
+  color: #ccc !important;
+}
+
+.project a:hover .follow-img {
+  opacity: 1;
+}
+
+.project .follow-img {
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  max-width: 400px;
+  box-sizing: border-box;
+  transition: ease .2s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
 }
