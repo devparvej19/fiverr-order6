@@ -1,0 +1,51 @@
+@media screen and (max-width: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .overlay-content a {
+        font-size: 6rem !important;
+    }
+
+}
+
+@media screen and (min-width: 767px) {
+    #myNav {
+        display: none !important;
+    }
+
+    .banner {
+        padding: 100px 5% 100px 20%;
+    }
+
+    
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .banner-title h1 {
+        font-size: 9.5vw;
+    }
+
+    .scroll-down .scroll-circle {
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .scroll-down .scroll-arrow {
+        stroke-width: 1.5;
+        height: 30rem;
+        width: 6rem;
+    }
+}
