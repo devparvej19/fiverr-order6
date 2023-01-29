@@ -53,6 +53,23 @@
 
     }
 
+    .projects-title2 {
+        display: block;
+    }
+
+    .line {
+        margin: 0 6rem;
+    }
+
+    .p {
+        font-size: 1.6rem;
+    }
+
+    .project-description {
+        font-size: 4.1666666667vw;
+    }
+
+
 
 
 }
@@ -88,16 +105,26 @@
     .footer-title {
         font-size: 1.8rem;
     }
+
     .service-title {
         font-size: 1.875vw;
         line-height: 1.4;
 
     }
 
-    .get-in-touch h4{
-        font-size: 9.5vw;
-        
+    .get-in-touch h4 {
+        font-size: 9.8vw;
+
     }
+
+    .p {
+        font-size: 1.8rem;
+    }
+
+    .project-description {
+        font-size: 1.875vw;
+    }
+
 
 }
 
