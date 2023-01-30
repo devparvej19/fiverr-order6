@@ -15,11 +15,101 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
 
+    <style>
+        
 
+/* Loader Styles start here */
+
+.loader {
+  display:block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:1001;
+}
+
+
+.loader-wrapper .loader-section {
+  position:fixed;
+  top:0;
+  background:#000;
+  width:51%;
+  height:100%;
+  z-index:1000;
+}
+.loader-wrapper .loader-section.section-left {
+  left:0
+}
+.loader-wrapper .loader-section.section-right {
+  right:0;
+}
+/* Loaded Styles */ 
+.loaded .loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.9s 2s ;
+}
+.loaded .loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.9s 2s ;
+}
+.loaded .loader {
+  opacity: 0;
+  transition: all 3s ease-out;
+  
+
+}
+.loader p{
+    font-size: 2.8vw;
+    margin-bottom: -30px;
+    transform: translateY(20px) ;
+    transition: all .3s;
+}
+.loaded .loader p{
+    transform: translateY(0px) ;
+
+}
+ @keyframes text-clip {
+	 from {
+		 clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+	}
+	 to {
+		 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+ .loader-inner-text {
+	 display: inline-block;
+     
+	 animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+    </style>
 </head>
 
 <body>
-
+    <div class="loader-wrapper">
+        <div class="loader text-white d-flex flex-column">
+            <div class="loader-inner-text">
+                <p class="">AN</p>
+                <br>
+            </div>
+            <div class="loader-inner-text">
+                <p class="ms-5 ps-5">TA</p>
+                <br>
+            </div>
+            <div class="loader-inner-text">
+                <p class="ms-5">RA</p>
+                <br>
+            
+            </div>
+            
+            
+            
+        </div>
+        <div class="loader-section section-left ">
+            
+        </div>
+        <div class="loader-section section-right"></div>
+    </div>
     <header class="header">
         <!-- place navbar here -->
         <nav class="navbar section-container navbar-expand-md navbar-light">
@@ -98,8 +188,8 @@
                 </div>
             </div>
         </nav>
-        <div class="custom-container banner d-flex align-items-center gap-5">
-            <div class="banner-text ">
+        <div class="custom-container banner d-flex align-items-center gap-0 gap-md-5 ">
+            <div class="banner-text">
                 <div class="d-flex align-items-center gap-5">
                     <div class="banner-title">
                         <h1>Where</h1>
@@ -340,6 +430,13 @@
         
 
     </footer>
+
+    <script>
+        // For Live Projects
+            window.addEventListener('load', function () {
+                document.querySelector('body').classList.add("loaded")
+            });
+    </script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
