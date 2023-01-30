@@ -55,15 +55,12 @@
 }
 .loaded .loader {
   opacity: 0;
-  transition: all 3s ease-out;
-  
-
+  transition: all 8s ease-out;
 }
 .loader p{
     font-size: 2.8vw;
     margin-bottom: -30px;
     transform: translateY(20px) ;
-    transition: all .3s;
 }
 .loaded .loader p{
     transform: translateY(0px) ;
@@ -77,9 +74,8 @@
 		 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
- .loader-inner-text {
+.loaded .loader-inner-text {
 	 display: inline-block;
-     
 	 animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
     </style>
